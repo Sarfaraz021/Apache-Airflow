@@ -1,0 +1,23 @@
+[2024-06-25T12:27:25.264+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-25T12:27:25.382+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: first_pipeline.start scheduled__2023-03-11T00:00:00+00:00 [queued]>
+[2024-06-25T12:27:25.432+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: first_pipeline.start scheduled__2023-03-11T00:00:00+00:00 [queued]>
+[2024-06-25T12:27:25.441+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-06-25T12:27:25.511+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): start> on 2023-03-11 00:00:00+00:00
+[2024-06-25T12:27:25.560+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'first_pipeline', 'start', 'scheduled__2023-03-11T00:00:00+00:00', '--job-id', '198', '--raw', '--subdir', 'DAGS_FOLDER/first_pipeline.py', '--cfg-path', '/tmp/tmpx5a7r0mg']
+[2024-06-25T12:27:25.583+0000] {standard_task_runner.py:91} INFO - Job 198: Subtask start
+[2024-06-25T12:27:25.559+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=913) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-06-25T12:27:25.625+0000] {standard_task_runner.py:63} INFO - Started process 921 to run task
+[2024-06-25T12:27:25.715+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-06-25T12:27:26.025+0000] {task_command.py:426} INFO - Running <TaskInstance: first_pipeline.start scheduled__2023-03-11T00:00:00+00:00 [running]> on host 9e56b32d651a
+[2024-06-25T12:27:26.562+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='first_pipeline' AIRFLOW_CTX_TASK_ID='start' AIRFLOW_CTX_EXECUTION_DATE='2023-03-11T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-03-11T00:00:00+00:00'
+[2024-06-25T12:27:26.569+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-25T12:27:26.579+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-06-25T12:27:26.585+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "Starting the pipeline..."']
+[2024-06-25T12:27:26.722+0000] {subprocess.py:86} INFO - Output:
+[2024-06-25T12:27:26.786+0000] {subprocess.py:93} INFO - Starting the pipeline...
+[2024-06-25T12:27:26.788+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-06-25T12:27:26.790+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-25T12:27:27.001+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=first_pipeline, task_id=start, run_id=scheduled__2023-03-11T00:00:00+00:00, execution_date=20230311T000000, start_date=20240625T122725, end_date=20240625T122727
+[2024-06-25T12:27:27.159+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-25T12:27:27.409+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-25T12:27:27.418+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
